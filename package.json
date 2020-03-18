@@ -9,13 +9,12 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc -d"
   },
-  "keywords": [],
+  "keywords": ["chrome", "i18n", "typescript", "code-gen"],
   "author": "quillzhou@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^13.1.8",
     "@types/watchpack": "^1.1.5",
-    "@types/webpack": "^4.41.2",
     "typescript": "^3.7.5"
   },
   "dependencies": {
