@@ -1,6 +1,6 @@
 {
   "name": "chrome-intl-code-gen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type safe i18n",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,12 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc -d"
   },
-  "keywords": ["chrome", "i18n", "typescript", "code-gen"],
+  "keywords": [
+    "chrome",
+    "i18n",
+    "typescript",
+    "code-gen"
+  ],
   "author": "quillzhou@gmail.com",
   "license": "ISC",
   "devDependencies": {
