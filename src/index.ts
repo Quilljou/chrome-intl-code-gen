@@ -1,4 +1,3 @@
-import { Compiler, Stats, compilation as compilationType } from 'webpack';
 import { Options } from './interfaces';
 import { Generator } from './generator';
 import fs from 'fs';
@@ -15,7 +14,7 @@ function isPlainObject(value: unknown): boolean {
     return prototype === null || prototype === Object.getPrototypeOf({});
 }
 
-class ChromeI18nCodeGenPlguin {
+class ChromeIntlnCodeGenPlguin {
     generator: Generator;
     options: Options;
     constructor(options: Options) {
@@ -51,4 +50,4 @@ class ChromeI18nCodeGenPlguin {
 
 export * from './interfaces'
 
-export default ChromeI18nCodeGenPlguin;
+export default ChromeIntlnCodeGenPlguin;

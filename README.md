@@ -6,10 +6,10 @@ It provide a webpack plugin for watching chrome extesion's `_locales` directory,
 ## Usage
 
 ```ts
-const ChromeI18nCodeGenPlguin = require('chrome-i18n-code-gen').default;
+const ChromeIntlCodeGenPlguin = require('chrome-intl-code-gen').default;
 
 [
-    new ChromeI18nCodeGenPlguin({
+    new ChromeIntlCodeGenPlguin({
       input: "public/_locales",
       output: "src/shared/locale.ts"
     })
