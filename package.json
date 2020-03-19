@@ -9,6 +9,9 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc -d"
   },
+  "repository": {
+    "url": "https://github.com/Quilljou/chrome-intl-code-gen"
+  },
   "keywords": [
     "chrome",
     "i18n",
