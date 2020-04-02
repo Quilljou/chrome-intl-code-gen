@@ -1,6 +1,6 @@
 {
   "name": "chrome-intl-code-gen",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Type safe i18n",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
