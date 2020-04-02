@@ -46,9 +46,8 @@ class ChromeIntlCodeGenPlguin {
             this.generator.start()
         })
 
-        if(!compiler.watch) {
+        if(!compiler.options.watch) {
             compiler.hooks.done.tap('ChromeIntlCodeGenPlguin', () => {
-                console.log('done xxxx')
                 watcher.close()
             })        
         }
