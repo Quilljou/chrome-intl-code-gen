@@ -2,7 +2,7 @@ import { Options } from './interfaces';
 import { Generator } from './generator';
 import fs from 'fs';
 import Watchpack from "watchpack";
-
+import { Compiler } from 'webpack'
 
 // Copied from https://github.com/sindresorhus/is-plain-obj/blob/97480673cf12145b32ec2ee924980d66572e8a86/index.js
 function isPlainObject(value: unknown): boolean {
@@ -14,7 +14,7 @@ function isPlainObject(value: unknown): boolean {
     return prototype === null || prototype === Object.getPrototypeOf({});
 }
 
-class ChromeIntlnCodeGenPlguin {
+class ChromeIntlCodeGenPlguin {
     generator: Generator;
     options: Options;
     constructor(options: Options) {
@@ -34,7 +34,7 @@ class ChromeIntlnCodeGenPlguin {
         this.options = options;
     }
 
-    apply() {
+    apply(compiler: Compiler) {
         const watcherOptions = {
             aggregateTimeout: 0
         };
@@ -45,9 +45,16 @@ class ChromeIntlnCodeGenPlguin {
         watcher.on('aggregated', (changes) => {
             this.generator.start()
         })
+
+        if(!compiler.watch) {
+            compiler.hooks.done.tap('ChromeIntlCodeGenPlguin', () => {
+                console.log('done xxxx')
+                watcher.close()
+            })        
+        }
     }
 }
 
 export * from './interfaces'
 
-export default ChromeIntlnCodeGenPlguin;
+export default ChromeIntlCodeGenPlguin;
